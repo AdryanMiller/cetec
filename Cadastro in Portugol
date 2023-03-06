@@ -1,0 +1,43 @@
+// Codigo teste
+program
+{
+	const inteiro num_alunos=2
+	
+	funcao inicio() 
+	{
+		inteiro matricula[2],num_matricula=0
+		cadeia nome[8], sobrenome[8], nome_aluno, sobren_aluno
+		real nota_1[num_alunos],nota_2[num_alunos],nota_3[num_alunos]
+		
+		// preenche o vetor
+		para (inteiro posicao = 0; posicao < 2; posicao++)
+		{
+			escreva("informe O numero\n: ")
+			leia(num_matricula)
+			matricula[posicao] = num_matricula // Sorteia um número e atribui à posição do vetor
+			escreva("Digite o nome do aluno\n: ")
+			leia(nome_aluno)
+			nome[posicao] = nome_aluno
+			escreva("Digite o sobrenome do aluno\n: ")
+			leia(sobren_aluno)
+			sobrenome[posicao] = nome_aluno
+		}
+
+		// Exibe o vetor na ordem original
+		escreva ("Vetor na ordem original:\n")
+		
+		para(inteiro posicao = 0; posicao < 2; posicao++)
+		{
+			escreva (matricula[posicao], " ")
+			escreva (nome[posicao], sobren_aluno, " ")
+		}
+		
+		// Exibe o vetor na ordem inversa
+		escreva ("\n\nVetor na ordem inversa:\n")
+		
+		para(inteiro posicao = 1; posicao >=0; posicao--)
+		{
+			escreva (matricula[posicao], " ")
+		}
+	}
+}
