@@ -1,0 +1,66 @@
+programa  
+{  
+	inclua biblioteca util --> u
+  inteiro segundo=0, minuto=0, hora=0
+	funcao inicio()  
+	{  
+   escreva("Relogio: \n")
+   conta_s()
+   conta_m()
+   conta_min_hora()
+   conta_h()
+	}  
+
+  funcao inteiro vazio conta_s()
+  {
+    para(inteiro segundos==0;segundos<60;segundos++)
+    {
+      segundo = segundo+1
+      u.aguarde(1000)
+      escreva(segundo)
+    }
+  }
+  
+    funcao inteiro vazio conta_m()
+  {
+    para(inteiro minuto==0;minutos<60;minuto++)
+    {
+      minuto =minuto+1
+      se(minuto ==59)
+      {
+        segundo = segundo+1
+        u.aguarde(1000)  
+        minuto = 0
+        conta_min_hora()
+      }
+      caso(minuto <59)
+      {
+        
+        conta_s()
+        
+      }
+    }
+  }
+  
+  funcao inteiro vazio conta_min_hora()
+  {
+    para(inteiro minuto==0;minutos<60;minuto++)
+    {
+      minuto = minuto+1
+      u.aguarde(1000)
+      escreva(minuto)
+    }
+  }
+  
+  funcao inteiro vazio conta_h()
+  {
+    para(inteiro hora==0;hora<60;hora++)
+    {
+      hora =hora+1
+      u.aguarde(1000)
+      escreva(hora)
+    }
+  }
+  
+  
+}  
